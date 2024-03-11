@@ -82,5 +82,3 @@ Feel free to fork the project, submit pull requests, or suggest features by open
 Enjoy generating jokes, and don't forget to share the laughter! For any queries or suggestions, reach out through our GitHub repository.
 
 ---
-
-This draft aligns with the details you've shared. Feel free to adjust or provide additional information if you'd like any modifications.
