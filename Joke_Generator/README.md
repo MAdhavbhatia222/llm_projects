@@ -1,4 +1,10 @@
 # Random Fact Joke Generator
+## Demo Video
+
+To see the Random Fact Joke Generator in action, check out our demo video:
+
+[Random Fact Joke Generator Demo](https://github.com/MAdhavbhatia222/llm_projects/blob/main/Joke_Generator/Fact_Joke__Project.mp4)
+- **Live Demo:** [www.factsdrive.net](http://www.factsdrive.net)
 
 Welcome to the Random Fact Joke Generator project! This fun and engaging web application serves up jokes based on random facts, combining humor with the power of Large Language Models (LLMs).
 
@@ -67,7 +73,7 @@ Feel free to fork the project, submit pull requests, or suggest features by open
 ## Stay Connected
 
 - **GitHub Repository :** [Text generation web UI](https://github.com/oobabooga/text-generation-webui)
-- **Live Demo:** [www.factsdrive.net](http://www.factsdrive.net)
+
 
 Enjoy generating jokes, and don't forget to share the laughter! For any queries or suggestions, reach out through our GitHub repository.
 
