@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fact Joke Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+		        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        #fact, #joke {
+            min-height: 50px;
+        }
+        #generate-joke {
+            display: none; /* Initially hide the generate joke button */
+        }
+    </style>
+</head>
+<body>
+    <h1>I will generate a joke about a random fact.</h1>
+    <div style="text-align: center;">
+        <button id="generate-fact">Show me a fact</button>
+        <button id="generate-joke">Generate Joke on fact</button>
+    </div>
+    <p id="fact"></p>
+    <p id="joke"></p>
+
+<script>
+    function typeWriter(text, elementId, callback, i=0, interval=50) {
+        if (i < text.length) {
+            document.getElementById(elementId).innerHTML += text.charAt(i);
+			i++;
+            setTimeout(() => typeWriter(text, elementId, callback, i, interval), interval);
+        } else if (callback) {
+            callback(); // Call the callback function after the typing effect is done
+        }
+    }
+
+    function showThinkingIndicator() {
+        $('#joke').html('<span class="thinking">...</span>'); // Show thinking indicator
+    }
+
+    function hideThinkingIndicator() {
+        $('#joke').find('.thinking').remove(); // Remove thinking indicator
+    }
+
+    $(document).ready(function() {
+        $('#generate-fact').click(function() {
+            $(this).hide(); // Hide the generate fact button when clicked
+            $('#generate-joke').hide(); // Also hide the generate joke button initially
+            $('#joke').text('');
+            $.getJSON('/get_fact', function(data) {
+                $('#fact').text('');
+                typeWriter(data.fact, 'fact', function() {
+                    // Show the generate joke button after the fact is displayed
+                    $('#generate-joke').show();
+                });
+            });
+        });
+
+        $('#generate-joke').click(function() {
+            $(this).hide(); // Hide the generate joke button when clicked
+			$('#generate-fact').hide(); // Also hide the generate fact button
+            showThinkingIndicator(); // Show thinking indicator
+            const fact = $('#fact').text();
+            $.ajax({
+                url: '/generate_joke',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({'fact': fact}),
+                success: function(data) {
+                    hideThinkingIndicator(); // Hide thinking indicator before displaying the joke
+                    $('#joke').text('');
+                    typeWriter(data.joke, 'joke', function() {
+                        // Only show the generate fact button after the joke is displayed
+                        $('#generate-fact').show();
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
