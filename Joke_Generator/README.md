@@ -43,12 +43,13 @@ Ensure you have Python and Flask installed on your system. Our setup runs on an 
 1. Clone these repository to your local machine.
     - [Text generation web UI](https://github.com/oobabooga/text-generation-webui)
     - [LLM_project_Joke_Generator](https://github.com/MAdhavbhatia222/llm_projects/Joke_Generator)
-2. Navigate to the project directory.
-3. Install the required Python packages:
+2. Follow steps from here : [Openai API version](https://github.com/oobabooga/text-generation-webui/wiki/12-%E2%80%90-OpenAI-API)
+3. Navigate to the project directory.
+4. Install the required Python packages:
    ```bash
    pip install -r requirements.txt
    ```
-4. Start the Flask server:
+5. Start the Flask server:
    ```bash
    python app.py
    ```
