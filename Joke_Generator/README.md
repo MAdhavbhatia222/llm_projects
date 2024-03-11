@@ -3,8 +3,8 @@
 
 To see the Random Fact Joke Generator in action, check out our demo video:
 
-[Random Fact Joke Generator Demo](https://github.com/MAdhavbhatia222/llm_projects/blob/main/Joke_Generator/Fact_Joke__Project.mp4)
-https://github.com/MAdhavbhatia222/llm_projects/blob/main/Joke_Generator/Fact_Joke__Project.gif
+![Random Fact Joke Generator Demo](https://github.com/MAdhavbhatia222/llm_projects/blob/main/Joke_Generator/Fact_Joke__Project.mp4)
+
 
 - **Live Demo:** [www.factsdrive.net](http://www.factsdrive.net)
 
