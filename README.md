@@ -1,2 +1,4 @@
-# llm_projects
-Collection of Madhav Bhatia's LLM Projects
+# LLM Projects
+Welcome to my random LLM projects. One of many ones to come is live right now.
+
+- Check it out here : [Random Joke Generator](https://github.com/MAdhavbhatia222/llm_projects/blob/main/Joke_Generator/README.md)
