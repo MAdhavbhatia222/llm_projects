@@ -1,14 +1,13 @@
 # Random Fact Joke Generator
 ## Demo Video
 
-To see the Random Fact Joke Generator in action, check out the wesite: [www.factsdrive.net](http://www.factsdrive.net)
+To see the Random Fact Joke Generator in action.
 
 <p align="center">
   <img src="https://github.com/MAdhavbhatia222/llm_projects/blob/main/Joke_Generator/Fact_Joke__Project.gif" alt="Random Fact Joke Generator Demo">
 </p>
 
 
-- **Live Demo:** [www.factsdrive.net](http://www.factsdrive.net)
 
 Welcome to the Random Fact Joke Generator project! This fun and engaging web application serves up jokes based on random facts, combining humor with the power of Large Language Models (LLMs).
 
